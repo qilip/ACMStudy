@@ -78,6 +78,12 @@
     "xtr1common": "cpp",
     "xutility": "cpp",
     "deque": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "stdio.h": "c",
+    "map": "cpp",
+    "numeric": "cpp",
+    "queue": "cpp",
+    "tuple": "cpp",
+    "xtree": "cpp"
   },
 }
