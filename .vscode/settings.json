@@ -84,6 +84,7 @@
     "numeric": "cpp",
     "queue": "cpp",
     "tuple": "cpp",
-    "xtree": "cpp"
+    "xtree": "cpp",
+    "memory": "cpp"
   },
 }
