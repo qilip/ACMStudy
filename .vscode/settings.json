@@ -90,6 +90,8 @@
     "list": "cpp",
     "unordered_map": "cpp",
     "xfunctional": "cpp",
-    "xhash": "cpp"
+    "xhash": "cpp",
+    "set": "cpp",
+    "stack": "cpp"
   },
 }
