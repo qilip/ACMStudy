@@ -11,19 +11,11 @@ bool find(int cut){
     for(int i=k;i>=0;i--){
         len += ku[i+1] - ku[i];
         if(len>cut){
-            len -= ku[i+1] - ku[i];
-            if(len > cut) return false;
             len = ku[i+1] - ku[i];
+            if(len > cut) return false;
             count++;
             lcut = ku[i+1];
         }
-    }
-    if(len>cut){
-        len -= ku[1] - ku[0];
-        if(len>cut) return false;
-        len = ku[1] - ku[0];
-        count++;
-        lcut = ku[1];
     }
     if(count > c){
         return false;
