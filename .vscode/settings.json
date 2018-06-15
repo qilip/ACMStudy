@@ -2,8 +2,8 @@
   "code-runner.executorMap": {
     "javascript": "node",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt < $dirtest.in",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt < $dirtest.in",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt -O2 -Wall -lm -static -std=c99 && $dir$fileNameWithoutExt < $dirtest.in",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -O2 -Wall -lm -static -std=gnu++14 && $dir$fileNameWithoutExt < $dirtest.in",
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "php": "php",
     "python": "python",
