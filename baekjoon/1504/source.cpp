@@ -25,9 +25,9 @@ int dijk(int src, int there){
         int cost = -pq.top().first;
         pq.pop();
         if(dist[now] < cost) continue;
-        for(int i=0;i<v[now].size();i++){
-            int next = v[now][i].second;
-            int next_cost = cost + v[now][i].first;
+        for(auto i : v[now]){
+            int next = i.second;
+            int next_cost = cost + i.first;
             if(dist[next] > next_cost){
                 dist[next] = next_cost;
                 pq.emplace(-next_cost, next);
