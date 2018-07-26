@@ -8,7 +8,7 @@ gcc file output
 
 
 ## LICENSE
-### ./APC/
+### ./apc/
 https://shake.codes
 
 Powered by A.N.S.I 아주대학교
@@ -16,13 +16,14 @@ Powered by A.N.S.I 아주대학교
 ---
 ### ./baekjoon/
 https://acmicpc.net
+
 \- s : 부계정
 
 ---
 ### ./codeforces/
 http://codeforces.com
 
- \- v : 버추얼
+\- v : 버추얼
 
 ---
 ### ./codejam/

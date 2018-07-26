@@ -8,7 +8,7 @@ typedef long long ll;
 int n;
 ll nn[300010];
 ll m = 1000000007;
-ll sum = 0, sumr = 0, suml = 0;
+ll sum = 0;
 ll e[300010];
 
 int main(void){
@@ -21,11 +21,9 @@ int main(void){
         scanf("%lld", &nn[i]);
     }
     sort(nn, nn+n);
-    for(int i=0;i<n;i++){
-        suml = (suml + ( (nn[i] % m) * (e[n-1-i]-1) ) % m) % m;
-        sumr = (sumr + ( (nn[i] % m) * (e[i]-1) ) % m) % m;
+    for(int i=1;i<=n;i++){
+        sum = (sum + ( (nn[i-1] % m) * (e[i-1] - e[n-i]) ) % m + m) % m;
     }
-    sum = (sumr - suml) % m;
     printf("%lld", sum);
     return 0;
 }
