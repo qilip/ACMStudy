@@ -26,7 +26,6 @@
 #include <numeric>
 #include <map>
 #include <set>
-#include <list>
 
 using namespace std;
 
@@ -37,8 +36,15 @@ int main(void){
     cin.tie(NULL);  // cout.tie(NULL); // SLOW?
     cout<<setprecision(8)<<fixed;
     // code start
-
-
-    
+    int n, k;
+    int chk[30] = {0};
+    char s[100010];
+    scanf("%d %d", &n, &k);
+    scanf("%s", s);
+    for(int i=0;i<n;i++){
+        chk[s[i]-'A']++;
+    }
+    int ans = *min_element(chk, chk+k);
+    printf("%d", ans*k);
     return 0;
 }
