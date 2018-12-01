@@ -38,3 +38,7 @@ All problem statements, input data and contest analyses are licensed under the [
 https://lavida.us
 
 아주대학교 알고리즘 소학회 A.N.S.I
+
+---
+### ./kattis
+https://open.kattis.com
