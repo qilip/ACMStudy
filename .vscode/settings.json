@@ -92,6 +92,7 @@
     "xfunctional": "cpp",
     "xhash": "cpp",
     "set": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "iomanip": "cpp"
   },
 }
