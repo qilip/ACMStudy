@@ -20,8 +20,15 @@ int main(void){
     int cnt = 0;
     for(int i=a;i<=b;i++){
         if(notPrime[i]) continue;
-        
+        int cur = i;
+        while(cur){
+            if((cur%10)==d){
+                cnt++;
+                break;
+            }
+            cur /= 10;
+        }
     }
-    printf("%d", &cnt);
+    printf("%d", cnt);
     return 0;
 }
