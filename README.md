@@ -19,6 +19,9 @@ https://acmicpc.net
 
 \- s : 부계정
 
+some testcase by USACO
+http://www.usaco.org/
+
 ---
 ### ./codeforces/
 http://codeforces.com
