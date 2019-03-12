@@ -16,11 +16,16 @@ struct cmp{
 int main(void){
     int n, t;
     pair<int, int> nn[25010];
+    int maxx[25010] = {0};
     scanf("%d %d", &n, &t);
     for(int i=0;i<n;i++){
         scanf("%d %d", &nn[i].first, &nn[i].second);
     }
     sort(nn, nn+n);
+    maxx[0] = nn[0].second;
+    for(int i=1;i<n;i++){
+        maxx[i] = maxx[i-1] > nn[i].second ? maxx[i-1] : nn[i].second;
+    }
     if(nn[0].first != 1){
         printf("-1");
         return 0;
@@ -29,12 +34,11 @@ int main(void){
     int ans = 0;
     while(ptr<t){
         int p = upper_bound(nn, nn+n, ptr, cmp())-nn;
-        if(p>n || ptr == nn[p-1].second){
-            printf("%d %d %d %d\n", p, n, ptr, nn[p-1].second);
+        if(p>n || ptr == maxx[p-1]){
             ans = -1;
             break;
         }
-        ptr = nn[p-1].second + 1;
+        ptr = maxx[p-1] + 1;
         ans++;
     }
     printf("%d", ans);
