@@ -32,9 +32,9 @@ int main(void){
     }
     int ptr = 1;
     int ans = 0;
-    while(ptr<t){
+    while(ptr-1<t){
         int p = upper_bound(nn, nn+n, ptr, cmp())-nn;
-        if(p>n || ptr == maxx[p-1]){
+        if(p>n || ptr-1 == maxx[p-1]){
             ans = -1;
             break;
         }
