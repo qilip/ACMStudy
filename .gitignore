@@ -5,3 +5,10 @@
 
 # 실행파일 무시
 *.exe
+
+# VSCode 설정 제외하고 무시
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
