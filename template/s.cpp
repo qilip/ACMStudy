@@ -27,6 +27,7 @@
 #include <map>
 #include <set>
 #include <list>
+#include <bitset>
 
 using namespace std;
 
