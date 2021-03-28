@@ -7,6 +7,9 @@
 # 실행파일 무시
 *.exe
 
+# Object 파일 무시
+*.o
+
 # VSCode 설정 제외하고 무시
 .vscode/*
 !.vscode/settings.json
