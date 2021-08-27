@@ -3,22 +3,17 @@
 int nw[100010];
 int nn[100010];
 
-int findp(int a, int bef){
+int findp(int a){
     if(nn[a] == a) return a;
-    if(bef) nw[bef] += nw[a];
-    return nn[a] = findp(nn[a], a);
-}
-
-void uni(int a, int b){
-    a = findp(a, 0);
-    b = findp(b, 0);
-    nn[a] = b;
+	int np = findp(nn[a]);
+	nw[a] += nw[nn[a]];
+	return nn[a] = np;
 }
 
 int ufind(int a, int b){
-    findp(a, 0);
-    findp(b, 0);
-    if(nn[a] && nn[a]==nn[b]) return 1;
+    int fa = findp(a);
+    int fb = findp(b);
+    if(fa==fb) return 1;
     return 0;
 }
 
@@ -29,6 +24,7 @@ int main(void){
         if(!n && !m) break;
         for(int i=0;i<=n;i++){
             nn[i] = i;
+			nw[i] = 0;
         }
         for(int i=0;i<m;i++){
             char c;
@@ -36,15 +32,15 @@ int main(void){
             if(c=='!'){
                 int a, b, w;
                 scanf("%d %d %d", &a, &b, &w);
-                if(nn[b]!=b){
-                    nn[a] = b; nw[a] = -w;
-                }else{
-                    nn[b] = a; nw[b] = w;
-                }
+                int fa = findp(a);
+                int fb = findp(b);
+				if(fa == fb) continue;
+				nw[fa] = nw[b] + w - nw[a];
+				nn[fa] = fb;
             }else{
                 int a, b;
                 scanf("%d %d", &a, &b);
-                if(ufind(a, b)) printf("%d\n", nw[b] - nw[a]);
+                if(ufind(a, b)) printf("%d\n", nw[a] - nw[b]);
                 else printf("UNKNOWN\n");
             }
         }
