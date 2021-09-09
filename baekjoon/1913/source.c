@@ -28,6 +28,7 @@ int main(void) {
         }
         mvt++;
     }
+	if(F == 1) Fh = N/2+1, Fw = N/2+1;
     for(int i=1;i<=N;i++) {
         for(int j=1;j<=N;j++) {
             printf("%d ", nn[i][j]);

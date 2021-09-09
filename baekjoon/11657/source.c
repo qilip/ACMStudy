@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define MAX 0x3F3F3F3F
+#define MAX 0x3F3F3F3F3F3F3F3F
 
 typedef struct _M{
     int a;
@@ -10,7 +10,7 @@ typedef struct _M{
 
 int main(void){
     int n, m;
-    int dist[501];
+    long long dist[501];
     memset(dist, 0x3F, sizeof dist);
     M mm[6010];
     scanf("%d %d", &n, &m);
@@ -34,7 +34,7 @@ int main(void){
     }else{
         for(int i=2;i<=n;i++){
             if(dist[i] == MAX) dist[i] = -1;
-            printf("%d\n", dist[i]);
+            printf("%lld\n", dist[i]);
         }
     }
     return 0;
