@@ -47,3 +47,7 @@ https://lavida.us
 ---
 ### ./kattis
 https://open.kattis.com
+
+---
+### ./spoj/
+https://www.spoj.com

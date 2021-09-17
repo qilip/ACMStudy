@@ -40,6 +40,10 @@
     "haskell": "runhaskell",
     "nim": "nim compile --verbosity:0 --hints:off --run"
   },
+  "code-runner.executorMapByFileExtension": {
+    ".ex": "mix run --no-mix-exs",
+    ".exs": "mix run"
+  },
   "editor.tabSize": 4,
   "files.associations": {
     "algorithm": "cpp",
