@@ -1,10 +1,10 @@
 # ACMStudy
 
-Ploblem Solve Study
+Problem Solving Study
 
 file output in `settings.json`
 
-```json
+```txt
  > $diroutput.out
 ```
 
@@ -19,8 +19,6 @@ Powered by A.N.S.I 아주대학교
 ### ./baekjoon/
 
 <https://acmicpc.net>
-
-\- s : 부계정
 
 some testcase by USACO
 <http://www.usaco.org/>
