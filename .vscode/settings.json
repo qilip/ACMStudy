@@ -100,4 +100,6 @@
     "iomanip": "cpp"
   },
   "editor.fontFamily": "Consolas, '맑은 고딕', 'Courier New', monospace",
+  "editor.formatOnSave": false,
+  "C_Cpp.errorSquiggles": "Enabled",
 }
