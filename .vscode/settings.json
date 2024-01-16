@@ -2,8 +2,8 @@
   "code-runner.executorMap": {
     "javascript": "cd $dir && node $fileName < $dirtest.in",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt -O2 -Wall -Wno-unused-result -lm -static -std=c11 && $dir$fileNameWithoutExt < $dirtest.in",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -O2 -Wall -Wno-unused-result -lm -static -std=gnu++17 && $dir$fileNameWithoutExt < $dirtest.in",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt -O2 -Wall -Wno-unused-result -lm -std=c11 && $dir$fileNameWithoutExt < $dirtest.in",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -O2 -Wall -Wno-unused-result -lm -std=gnu++17 && $dir$fileNameWithoutExt < $dirtest.in",
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "php": "php",
     "python": "cd $dir && python $fileName < $dirtest.in",
@@ -99,7 +99,5 @@
     "stack": "cpp",
     "iomanip": "cpp"
   },
-  "editor.fontFamily": "Consolas, '맑은 고딕', 'Courier New', monospace",
-  "editor.formatOnSave": false,
-  "C_Cpp.errorSquiggles": "Enabled",
+  "C_Cpp.errorSquiggles": "enabled",
 }
